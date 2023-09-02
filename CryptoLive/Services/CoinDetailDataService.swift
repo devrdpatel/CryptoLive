@@ -31,23 +31,5 @@ class CoinDetailDataService {
                 self?.coinDetails = returnedCoinDetail
                 self?.coinDetailSubscription?.cancel()
             })
-        
-//        let file = "CoinData.json"
-//        guard let url = Bundle.main.url(forResource: file, withExtension: nil) else {
-//            fatalError("Failed to locate \(file) in bundle")
-//        }
-//
-//        guard let data = try? Data(contentsOf: url) else {
-//            fatalError("Failed to load \(file) from bundle")
-//        }
-//
-//        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-//
-//        guard let loaded = try? decoder.decode([Coin].self, from: data) else {
-//            fatalError("Faield to decode \(file) from bundle")
-//        }
-//
-//        self.allCoins = loaded
     }
 }
