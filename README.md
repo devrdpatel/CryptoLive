@@ -2,6 +2,22 @@
 SwiftUI Application that . Credit goes to [SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking]SwiftfulThinking) (see **Credits** section for more details).
 
 # App Preview
+<p align="center">
+  <img alt="Light" src="https://imgur.com/zfTrjgD.gif" width="30%">
+&nbsp; &nbsp;
+  <img alt="Dark" src="https://imgur.com/wEO6BqK.gif" width="30%">
+&nbsp; &nbsp;
+  <img alt="Dark" src="https://imgur.com/k3UHLI6.gif" width="30%">
+</p>
+
+<p align="center">
+  <img alt="Light" src="https://imgur.com/ednhLDU.gif" width="30%">
+&nbsp; &nbsp;
+  <img alt="Dark" src="https://imgur.com/MPQ4WxP.gif" width="30%">
+&nbsp; &nbsp;
+  <img alt="Dark" src="https://imgur.com/qiXtZiZ.gif" width="30%">
+</p>
+
 
 # Technical Details
 
