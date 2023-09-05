@@ -30,7 +30,7 @@ Users can view crypto currency updates live in the app for most popular coins, r
 - All crypto market and currency data is fetched asynchronously using [CoinGecko's API](https://www.coingecko.com/en/api) (Free version limits API calls per min)
 - Data fetching services are integrated with Combine's publishers to coordinate all interactions between data services and seamlessly update the UI.
 - Network tasks are managed by a custom class that handles URLResponses (such as network errors) and completion events
-- Coin images, once fetched, are cached in the File Manager's caechesDirectory
+- Coin images, once fetched, are cached in the File Manager's cachesDirectory
 - Portfolio holdings are stored using Core Data
 - Custom Chart View created to animate and display live coin price data
 - Project files are organized using MVVM (Model-View-ViewModel) architecture
