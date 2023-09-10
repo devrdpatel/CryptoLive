@@ -18,6 +18,8 @@ All the information a crypto currency enthusiast could need, packed into one Swi
   <img alt="Dark" src="https://imgur.com/qiXtZiZ.gif" width="30%">
 </p>
 
+https://github.com/devrdpatel/CryptoLive/assets/106772575/82a911ed-e4a1-49ec-8653-924cade38e30
+
 # CryptoLive's Purpose
 Users can view crypto currency updates live in the app for most popular coins, rather than having to check a coin's price online or having to create a crypto brokerage account. The app also allows users to simulate holdings of a coin at free will to see how their portfolio would perform over a period of time. In addition to crytpo market data, the app also provides additional information about each coin including a 7 day price chart.
 
