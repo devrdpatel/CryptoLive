@@ -25,6 +25,7 @@ class MarketDataService {
         // creates a network call and updates the marketData publisher when new data is received
         marketDataSubscription = NetworkingManager.download(url: url)
             .decode(type: GlobalData.self, decoder: decoder)
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedGlobalData) in
                 self?.marketData = returnedGlobalData.data
                 self?.marketDataSubscription?.cancel()

@@ -28,6 +28,7 @@ class CoinDetailDataService {
         // creates a network call and updates coinDetails publisher when new data is received
         coinDetailSubscription = NetworkingManager.download(url: url)
             .decode(type: CoinDetail.self, decoder: decoder)
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedCoinDetail) in
                 self?.coinDetails = returnedCoinDetail
                 self?.coinDetailSubscription?.cancel()
