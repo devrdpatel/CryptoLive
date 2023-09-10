@@ -35,9 +35,11 @@ class CoinImageService {
     private func downloadCoinImage() {
         guard let url = URL(string: coin.image) else { return }
 
+        // JSON data has snake_case keys which need to be decoded into camelCase variables
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
+        // creates a network call and caches the image that was fetched if necessary
         imageSubscription = NetworkingManager.download(url: url)
             .tryMap({ (data) -> UIImage? in
                 return UIImage(data: data)

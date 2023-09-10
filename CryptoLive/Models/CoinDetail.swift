@@ -7,6 +7,28 @@
 
 import Foundation
 
+struct CoinDetail: Codable {
+    let id, symbol, name: String?
+    let blockTimeInMinutes: Int?
+    let hashingAlgorithm: String?
+    let categories: [String]?
+    let description: Description?
+    let links: Links?
+    
+    var readableDescription: String? {
+        description?.en?.removingHTMLOccurrences
+    }
+}
+
+struct Description: Codable {
+    let en: String?
+}
+
+struct Links: Codable {
+    let homepage: [String]?
+    let subredditUrl: String?
+}
+
 // JSON Data
 /*
  
@@ -109,25 +131,3 @@ Response:
  }
  
  */
-
-struct CoinDetail: Codable {
-    let id, symbol, name: String?
-    let blockTimeInMinutes: Int?
-    let hashingAlgorithm: String?
-    let categories: [String]?
-    let description: Description?
-    let links: Links?
-    
-    var readableDescription: String? {
-        description?.en?.removingHTMLOccurrences
-    }
-}
-
-struct Description: Codable {
-    let en: String?
-}
-
-struct Links: Codable {
-    let homepage: [String]?
-    let subredditUrl: String?
-}

@@ -26,6 +26,7 @@ class PortfolioDataService {
     }
     
     // MARK: PUBLIC
+    // this function will handle all portfolio updates (additions, deletions and modifications)
     
     func updatePortfolio(coin: Coin, amount: Double) {
         
@@ -43,6 +44,7 @@ class PortfolioDataService {
     
     // MARK: PRIVATE
     
+    // creates a fetchrequest to load items from container
     private func getPorfolio() {
         let request = NSFetchRequest<PortfolioItem>(entityName: entityName)
         do {
@@ -57,7 +59,6 @@ class PortfolioDataService {
         portfolioItem.coinId = coin.id
         portfolioItem.amount = amount
         
-        // Generally, it's better to append new item to entity array
         applyChanges()
     }
     
@@ -79,8 +80,11 @@ class PortfolioDataService {
         }
     }
     
+    // reloads portfolio items after saving any changes made
     private func applyChanges() {
         save()
+        // oftentimes it's better to append or remove items from entity array
+        // however, here items are just loaded again since they take up relatively little storage
         getPorfolio()
     }
 }

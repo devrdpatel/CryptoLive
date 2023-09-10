@@ -49,7 +49,7 @@ class LocalFileManager {
     }
     
     private func getURLForFolder(folderName: String) -> URL? {
-        // The cachesDirectory is used since it's alright if some of the images are deleted for extra space
+        // The cachesDirectory is used since image data can be redownloaded if it was deleted for extra space
         guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return nil }
         return url.appendingPathComponent(folderName)
     }

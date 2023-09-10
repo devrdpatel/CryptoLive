@@ -7,6 +7,27 @@
 
 import Foundation
 
+struct GlobalData: Codable {
+    let data: MarketData?
+}
+
+struct MarketData: Codable {
+    let totalMarketCap, totalVolume, marketCapPercentage: [String: Double]
+    let marketCapChangePercentage24HUsd: Double
+    
+    var marketCap: String {
+        "$\(totalMarketCap["usd", default: 0.0].formattedWithAbbreviations())"
+    }
+    
+    var volume: String {
+        "$\(totalVolume["usd", default: 0.0].formattedWithAbbreviations())"
+    }
+    
+    var bitcoinDominance: String {
+        "\(marketCapPercentage["btc", default: 0.0].asPercentString())"
+    }
+}
+
 // JSON Data:
 /*
  
@@ -163,24 +184,3 @@ import Foundation
     }
 }
  */
-
-struct GlobalData: Codable {
-    let data: MarketData?
-}
-
-struct MarketData: Codable {
-    let totalMarketCap, totalVolume, marketCapPercentage: [String: Double]
-    let marketCapChangePercentage24HUsd: Double
-    
-    var marketCap: String {
-        "$\(totalMarketCap["usd", default: 0.0].formattedWithAbbreviations())"
-    }
-    
-    var volume: String {
-        "$\(totalVolume["usd", default: 0.0].formattedWithAbbreviations())"
-    }
-    
-    var bitcoinDominance: String {
-        "\(marketCapPercentage["btc", default: 0.0].asPercentString())"
-    }
-}
