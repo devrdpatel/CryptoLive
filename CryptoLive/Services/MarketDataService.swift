@@ -20,8 +20,7 @@ class MarketDataService {
         guard let url = URL(string: "https://api.coingecko.com/api/v3/global") else { return }
 
         // JSON data has snake_case keys which need to be decoded into camelCase variables
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let decoder = JSONDecoder().convertsSnakeCase
 
         // creates a network call and updates the marketData publisher when new data is received
         marketDataSubscription = NetworkingManager.download(url: url)
