@@ -33,6 +33,7 @@ Users can view crypto currency updates live in the app for most popular coins, r
 - Coin images, once fetched, are cached in the File Manager's cachesDirectory
 - Portfolio holdings are stored using Core Data
 - Custom Chart View created to animate and display live coin price data
+- Coins are searchable and can be sorted by rank, holdings, or price
 - Project files are organized using MVVM (Model-View-ViewModel) architecture
 
 # Upcoming features
