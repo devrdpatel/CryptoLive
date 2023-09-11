@@ -41,6 +41,7 @@ Users can view crypto currency updates live in the app for most popular coins, r
 # Upcoming features
 I am currently working on the following features:
 - [ ] Giving users the options to view price charts for different time periods
+- [ ] Showing users a chart for their portfolio performance over select periods of time
 - [ ] Implementing a "buy" and "sell" interface for the Edit Portfolio Holdings View
 
 # Credits
